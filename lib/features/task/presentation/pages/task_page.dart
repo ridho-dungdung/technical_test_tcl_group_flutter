@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:test_tcl_group/core/components/loading_shimmer.dart';
 import 'package:test_tcl_group/features/task/presentation/widgets/list_task.dart';
 
 import '../bloc/task_bloc.dart';
@@ -18,7 +19,8 @@ class TaskPage extends StatelessWidget{
         builder: (context, state) {
           if(state is TaskLoading) {
             return Center(
-              child: CircularProgressIndicator(color: Colors.blue.shade400)
+              child: loadingShimmer(context)
+              // child: CircularProgressIndicator(color: Colors.blue.shade400)
             );
           } else if(state is TaskLoaded) {
             return listTasks(context, state);
