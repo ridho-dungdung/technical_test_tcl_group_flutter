@@ -60,6 +60,7 @@ class _TaskDetailsPageState extends State<TaskDetailsPage> {
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 14),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text('Description : ',
                         style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black)

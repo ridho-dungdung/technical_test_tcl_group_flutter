@@ -21,7 +21,7 @@ class TaskBloc extends Bloc<TaskEvent, TaskState> {
   TaskBloc(this.taskUseCase) : super(TaskInitial()) {
     on<FetchTaskEvent>((event, emit) async {
       emit(TaskLoading());
-      await Future.delayed(Duration(seconds: 1));
+      await Future.delayed(Duration(seconds: 2));
       try{
         final tasks = await taskUseCase.all();
 

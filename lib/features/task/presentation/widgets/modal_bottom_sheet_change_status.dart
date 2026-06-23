@@ -10,7 +10,7 @@ Widget modalBottomSheetChangeStatus(BuildContext context) {
         children: [
           Padding(
             padding: const EdgeInsets.only(top: 14, bottom: 6),
-            child: Text('Status',
+            child: Text('Change Status',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
           ),
